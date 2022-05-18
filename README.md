@@ -33,11 +33,12 @@ The Poisson distribution is the discrete probability distribution of the number 
 
 # Program
 ```
-# Developed by:M.SRI HARISH
-# Register Number: 212220230047
+# Developed by: Saran M
+# Register Number:212220230044
 ```
 
-```Python
+```python
+
 import numpy as np
 import math
 import scipy.stats
@@ -50,7 +51,7 @@ Pr=list(); E=list(); xi=list()
 print("  X P(X=x) Obs.Fr  Ex.Fre   xi ")
 print("----------------------------------")
 for x in range(7):
-    Pr.append(math.exp(-mean)*mean*x/math.factorial(x))
+    Pr.append(math.exp(-mean)*mean**x/math.factorial(x))
     E.append(Pr[x]*N)
     xi.append((f[x]-E[x])**2/E[x])
     print("%2.2f %2.2f  %4.2f   %3.2f  %3.2f"%(x,Pr[x],f[x],E[x],xi[x]))
@@ -64,8 +65,11 @@ if cal_chi2<tab_chi2:
 else:
     print("The given data cannot be fitted in Poisson distribution at 1% LOS")
 ```
-OUTPUT:
-![image](https://user-images.githubusercontent.com/75241366/167101810-dee8495f-03c9-4778-be05-d8158bd980ba.png)
+
+ 
+# OUTPUT:
+![image](https://user-images.githubusercontent.com/75241366/168961138-04aabe64-cb50-46df-aa14-871ab528041c.png)
+
 
 
 # Results:
